@@ -1,15 +1,28 @@
 <?php
 
-#$result2 = smaller($a ,$b ,$c);
-#$result3 = equal($a ,$b ,$c);
+function greater($n1, $n2, $n3) {
+    //return max($n1, $n2, $n3);
 
-$a = 5;
-$b = 5;
-$c = 5;
+    if ($n1 > $n2) {
+        if ($n1 > $n3) {
 
-$result = greater($a ,$b ,$c);
+            // n1 > n2, n3
+            return $n1;
+        }
 
-function greater($n1 ,$n2 ,$n3) {
+        // n3 > n1 > n2
+        return $n3;
+    }
+
+    if ($n2 > $n3) {
+        // n2 > n1, n3
+        return $n2;
+    }
+
+    return $n3;
+}
+
+function greaterOld($n1 ,$n2 ,$n3) {
     if($n2 > $n1){
        if($n2 > $n3){
         return $n2;
@@ -32,9 +45,3 @@ function greater($n1 ,$n2 ,$n3) {
    
     if($n1 == $n3){return $n1;}
 }
-var_dump($result);
-
-#function 3 tane kullan 
-#funtion 10 ?
-
-?>
