@@ -4,6 +4,7 @@
 //include_once 'index.php';       // optional once
 //require 'index.php';            // mandatory
 require_once 'greater.php';       // mandatory once
+require_once 'equal.php';
 //require_once 'auth.php';
 
 /**
