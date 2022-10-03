@@ -7,8 +7,8 @@ require_once 'greater.php';       // mandatory once
 //require_once 'auth.php';
 
 /**
- * 1 1 1
- * 1 1 2
+ * 1 1 1        *
+ * 1 1 2        *
  * 1 2 1        *
  * 2 1 1        *
  * 2 2 1
@@ -40,5 +40,32 @@ function testForTheSecondNumberWasTheGreatest() {
     assert($expectedNumber === $actualNumber, 'Second number should be the greatest');
 }
 
+function testForTheThirdNumberWasTheGreatest() {
+    $firstNumber = 60;
+    $secondNumber = 5;
+    $thirdNumber = 499;
+
+    $expectedNumber = 499;
+
+    $actualNumber = greater($firstNumber, $secondNumber, $thirdNumber);
+
+    assert($expectedNumber === $actualNumber, 'Third number should be the greatest');
+}//added by bora
+
+function testForAllNumbersAreEquals() {
+    $firstNumber = 60;
+    $secondNumber = 60;
+    $thirdNumber = 60;
+
+    $expectedNumber = 60;
+
+    $actualNumber = greater($firstNumber, $secondNumber, $thirdNumber);
+
+    assert($expectedNumber === $actualNumber, 'All numbers are should be the equal');
+}//added by bora
+
+
 testForTheFirstNumberWasTheGreatest();
 testForTheSecondNumberWasTheGreatest();
+testForTheThirdNumberWasTheGreatest();
+testForAllNumbersAreEquals();
